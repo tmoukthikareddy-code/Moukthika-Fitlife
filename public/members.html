@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Members | Moukthika Fitlife</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Moukthika <b>Fitlife</b></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="add-member.html">Add Member</a>
+        <a class="active" href="members.html">Members</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Our <span>Members</span></h1>
+    <p>View registered members and their contact details.</p>
+</section>
+
+<section class="section">
+    <a class="btn" href="add-member.html">+ Add New Member</a>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Joined</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="membersTable">
+                <tr><td colspan="7">Loading members...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer>© 2026 Moukthika Fitlife</footer>
+<script src="app.js"></script>
+</body>
+</html>

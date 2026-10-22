@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subscriptions | Moukthika Fitlife</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Moukthika <b>Fitlife</b></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="add-member.html">Add Member</a>
+        <a href="members.html">Members</a>
+        <a class="active" href="subscriptions.html">Subscriptions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Manage <span>Subscriptions</span></h1>
+    <p>Assign a membership plan and track subscription dates and payments.</p>
+</section>
+
+<section class="section form-layout">
+    <div>
+        <img class="rounded-photo"
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85"
+          alt="Fitness training">
+        <h2>Track every membership</h2>
+        <p>Register a member and create a plan before creating a subscription.</p>
+    </div>
+
+    <form id="subscriptionForm" class="form-card">
+        <label>Member
+            <select id="subscriptionMember" name="member_id" required>
+                <option value="">Select member</option>
+            </select>
+        </label>
+
+        <label>Membership Plan
+            <select id="subscriptionPlan" name="membership_id" required>
+                <option value="">Select plan</option>
+            </select>
+        </label>
+
+        <label>Start Date
+            <input type="date" name="start_date" required>
+        </label>
+
+        <label>End Date
+            <input type="date" name="end_date" required>
+        </label>
+
+        <label>Amount Paid (₹)
+            <input type="number" name="amount_paid"
+                   min="0" step="0.01" value="0" required>
+        </label>
+
+        <label>Payment Status
+            <select name="payment_status">
+                <option>Pending</option>
+                <option>Paid</option>
+                <option>Partial</option>
+            </select>
+        </label>
+
+        <button class="btn" type="submit">Save Subscription</button>
+        <p id="subscriptionMessage" role="status"></p>
+    </form>
+</section>
+
+<section class="section">
+    <h2>Subscription Records</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Member</th>
+                    <th>Plan</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Paid</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="subscriptionsTable">
+                <tr><td colspan="7">Loading subscriptions...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn" onclick="loadSubscriptions()">Refresh</button>
+</section>
+
+<footer>© 2026 Moukthika Fitlife</footer>
+<script src="app.js"></script>
+</body>
+</html>

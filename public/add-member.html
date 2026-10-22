@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Member | Moukthika Fitlife</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Moukthika <b>Fitlife</b></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a class="active" href="add-member.html">Add Member</a>
+        <a href="members.html">Members</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Member <span>Registration</span></h1>
+    <p>Register a new member at Moukthika Fitlife.</p>
+</section>
+
+<section class="section form-layout">
+    <div>
+        <img class="rounded-photo"
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
+          alt="Gym interior">
+        <h2>Start your fitness journey</h2>
+        <p>Complete the form to save a new member to the database.</p>
+    </div>
+
+    <form id="memberForm" class="form-card">
+        <label>Full Name
+            <input name="full_name" required maxlength="100">
+        </label>
+
+        <label>Email Address
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Phone Number
+            <input name="phone" required maxlength="20">
+        </label>
+
+        <label>Gender
+            <select name="gender">
+                <option value="">Select gender</option>
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+                <option>Prefer not to say</option>
+            </select>
+        </label>
+
+        <label>Date of Birth
+            <input type="date" name="date_of_birth">
+        </label>
+
+        <label>Joining Date
+            <input type="date" name="joined_on">
+        </label>
+
+        <button class="btn" type="submit">Register Member</button>
+        <p id="memberMessage" role="status"></p>
+    </form>
+</section>
+
+<footer>© 2026 Moukthika Fitlife</footer>
+<script src="app.js"></script>
+</body>
+</html>

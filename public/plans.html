@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plans | Moukthika Fitlife</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Moukthika <b>Fitlife</b></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="plans.html">Plans</a>
+        <a href="add-member.html">Add Member</a>
+        <a href="members.html">Members</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Choose Your <span>Fitness Plan</span></h1>
+    <p>Select a plan that suits your fitness goals.</p>
+</section>
+
+<section class="section">
+    <h2>Available Plans</h2>
+    <div class="plan-grid" id="planGrid">Loading plans...</div>
+</section>
+
+<section class="section feature-section">
+    <h2>Add a Membership Plan</h2>
+    <form id="planForm" class="form-card">
+        <label>Plan Name
+            <input name="plan_name" required>
+        </label>
+        <label>Duration in Months
+            <input type="number" name="duration_months"
+                   min="1" required>
+        </label>
+        <label>Price in Rupees
+            <input type="number" name="price"
+                   min="0" step="0.01" required>
+        </label>
+        <label>Description
+            <textarea name="description"></textarea>
+        </label>
+        <button class="btn" type="submit">Add Plan</button>
+        <p id="planMessage" role="status"></p>
+    </form>
+</section>
+
+<footer>© 2026 Moukthika Fitlife</footer>
+<script src="app.js"></script>
+</body>
+</html>
